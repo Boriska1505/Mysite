@@ -1,58 +1,384 @@
-<html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Музыкальная студия</title>
-     <header style="font-family:sans serif;background-color:lightyellow"> 
-        <img src="https://img.freepik.com/premium-vector/microphone-artwork-illustration-design-logo_317408-193.jpg" width="100">
-        <a href="#games" style="color:green;font-size:20px">Прайс</a>
-        <a href="#info" style="color:green;font-size:20px">Контактная информация</a>
-        <h1 style="text-align:center">Студия звукозаписи</h1>
-        <h2 style="text-align:center">Лучший звук в твоем городе</h2>
-     </header>
-     <main style="background-color:lightyellow">
-      <p style="font-size:30px;text text-align:right">Ищешь студию звукозаписи с недорогими сценами и хорошей аппаратурой это к нам в нашей студии вы сможете записать голос сделать бит и.т.д</p>
-       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Onyx_Soundlab.jpg/1200px-Onyx_Soundlab.jpg" height="650">
-       <p style="font-size:30px">В нашей студии находится профессиональное оборудование позволяющее записывать звук в хорошем качестве.<br/>У нас находится большое количетсво микрофонов для разных стилей и звучаний</p>
-       <img src="https://muzmart.com/files/user/%D0%A1%D1%82%D0%B0%D1%82%D1%8C%D0%B8/%D0%A1%D1%82%D1%83%D0%B4%D0%B8%D0%B9%D0%BD%D1%8B%D0%B9%20%D0%BC%D0%B8%D0%BA%D1%80%D0%BE%D1%84%D0%BE%D0%BD/5.jpg" height="650" width="980">
-       <table id="games">
-          <tr>
-            <td style="border:1px solid black">Прайс</td>
-            <td style="border:1px solid gray">пакет Minimal</td>
-            <td style="border:1px solid gray">Пакет optimum</td>
-            <td style="border:1px solid gray">пакет deluxe</td>
-            <td style="border:1px solid gray">пакет ultradeluxe</td>
-          </tr>
-          <tr>
-            <td style="border:1px solid gray">Цена</td>
-            <td style="border:1px solid gray">4000 рублей</td>
-            <td style="border:1px solid gray">6000</td>
-            <td style="border:1px solid gray">10000</td>
-            <td style="border:1px solid gray">15000</td>
-          </tr>
-          <tr>
-            <td style="border:1px solid gray">время записи</td>
-            <td style="border:1px solid gray">3 часа</td>
-            <td style="border:1px solid gray">4 часа</td>
-            <td style="border:1px solid gray">6 часов</td>
-            <td style="border:1px solid gray">8 часов</td>
-          </tr>
-          <tr>
-            <td style="border:1px solid gray">аппаратура</td>
-            <td style="border:1px solid gray">микрофон,микшер</td>
-            <td style="border:1px solid gray">микрофон,микшер,наушники</td>
-            <td style="border:1px solid gray">микрофон,микшер,наушники студийные</td>
-            <td style="border:1px solid gray">все выше перечисленное на выбор</td>
-          </tr>
-       </table>
-     </main>
-     <footer>
-      <p style="text-align:center;font-size:30px">Контактная информация</p>
-      <h3 id="info">Адрес студии:Г.Алгоритмово,улица html дом 34г,офис 140;Г. Москва,Улица ленина 135,Офис 246</h3>
-      <h4>По вопросам обращаться по номеру +123456789101 либо в телеграмм @Algomusicstudy</h4>
-      <h1 style="text-align:center">Записаться к нам</h1>
-       <form>
-        <p><label>ФИО<input type="text"></label></p>
-        <p><label>Номер телефона<input type="tel"></label></p>
-        <p><label>Подписаться на рассылку<input type="checkbox"></label></p>
-        <input type="submit" value="Отправить">
-       </form>
-     </footer>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: #fffde7;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            width: 80px;
+            height: auto;
+            margin-right: 15px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-links a {
+            color: #2e7d32;
+            font-size: 18px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #1b5e20;
+            text-decoration: underline;
+        }
+        
+        .header-titles {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .header-titles h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #2e7d32;
+        }
+        
+        .header-titles h2 {
+            font-size: 24px;
+            font-weight: 400;
+            color: #558b2f;
+        }
+        
+        /* Main content */
+        main {
+            background-color: #fffde7;
+            padding: 40px 0;
+        }
+        
+        .intro {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .intro p {
+            font-size: 20px;
+            text-align: justify;
+            line-height: 1.5;
+        }
+        
+        .intro-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Pricing table */
+        .pricing {
+            margin: 40px 0;
+        }
+        
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .pricing-table th, .pricing-table td {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+            text-align: center;
+        }
+        
+        .pricing-table th {
+            background-color: #2e7d32;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .pricing-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .pricing-table tr:hover {
+            background-color: #e8f5e9;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #2e7d32;
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .footer-content {
+            text-align: center;
+        }
+        
+        .footer-content h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+        
+        .footer-content h4 {
+            font-size: 16px;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+        
+        .contact-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .signup-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        
+        /* Form */
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .form-group input[type="text"],
+        .form-group input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .form-group.checkbox {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .form-group.checkbox input {
+            width: auto;
+        }
+        
+        .submit-btn {
+            background-color: #ffeb3b;
+            color: #333;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #fdd835;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .header-top {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .nav-links {
+                margin-top: 15px;
+            }
+            
+            .intro p {
+                font-size: 18px;
+            }
+            
+            .pricing-table {
+                font-size: 14px;
+            }
+            
+            .pricing-table th, .pricing-table td {
+                padding: 8px 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header-titles h1 {
+                font-size: 28px;
+            }
+            
+            .header-titles h2 {
+                font-size: 18px;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            
+            .pricing-table {
+                font-size: 12px;
+            }
+            
+            .pricing-table th, .pricing-table td {
+                padding: 6px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <img src="https://img.freepik.com/premium-vector/microphone-artwork-illustration-design-logo_317408-193.jpg" alt="Логотип студии звукозаписи">
+                </div>
+                <nav class="nav-links">
+                    <a href="#pricing">Прайс</a>
+                    <a href="#contact">Контактная информация</a>
+                </nav>
+            </div>
+            <div class="header-titles">
+                <h1>Студия звукозаписи</h1>
+                <h2>Лучший звук в твоем городе</h2>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <section class="intro">
+                <p>Ищешь студию звукозаписи с недорогими сценами и хорошей аппаратурой? Это к нам! В нашей студии вы сможете записать голос, сделать бит и многое другое.</p>
+                
+                <img class="intro-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Onyx_Soundlab.jpg/1200px-Onyx_Soundlab.jpg" alt="Студия звукозаписи">
+                
+                <p>В нашей студии находится профессиональное оборудование, позволяющее записывать звук в хорошем качестве.<br>У нас находится большое количество микрофонов для разных стилей и звучаний.</p>
+                
+                <img class="intro-image" src="https://muzmart.com/files/user/%D0%A1%D1%82%D0%B0%D1%82%D1%8C%D0%B8/%D0%A1%D1%82%D1%83%D0%B4%D0%B8%D0%B9%D0%BD%D1%8B%D0%B9%20%D0%BC%D0%B8%D0%BA%D1%80%D0%BE%D1%84%D0%BE%D0%BD/5.jpg" alt="Студийные микрофоны">
+            </section>
+            
+            <section id="pricing" class="pricing">
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Прайс</th>
+                            <th>Пакет Minimal</th>
+                            <th>Пакет Optimum</th>
+                            <th>Пакет Deluxe</th>
+                            <th>Пакет UltraDeluxe</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Цена</td>
+                            <td>4000 рублей</td>
+                            <td>6000 рублей</td>
+                            <td>10000 рублей</td>
+                            <td>15000 рублей</td>
+                        </tr>
+                        <tr>
+                            <td>Время записи</td>
+                            <td>3 часа</td>
+                            <td>4 часа</td>
+                            <td>6 часов</td>
+                            <td>8 часов</td>
+                        </tr>
+                        <tr>
+                            <td>Аппаратура</td>
+                            <td>Микрофон, микшер</td>
+                            <td>Микрофон, микшер, наушники</td>
+                            <td>Микрофон, микшер, наушники студийные</td>
+                            <td>Все выше перечисленное на выбор</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+    
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <p class="contact-title">Контактная информация</p>
+                <h3>Адрес студии: Г. Алгоритмово, улица HTML дом 34г, офис 140; Г. Москва, Улица Ленина 135, Офис 246</h3>
+                <h4>По вопросам обращаться по номеру +123456789101 либо в телеграмм @Algomusicstudy</h4>
+                
+                <h1 class="signup-title">Записаться к нам</h1>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">ФИО</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Номер телефона</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="subscribe">
+                        <label for="subscribe">Подписаться на рассылку</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>
